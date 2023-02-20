@@ -126,3 +126,9 @@ Tidy up dependencies
 ```
 go mod tidy
 ```
+
+Test 
+```
+go test
+go test -v
+```
