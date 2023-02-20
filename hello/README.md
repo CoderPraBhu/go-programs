@@ -95,3 +95,34 @@ Run
 go run .
 Don't communicate by sharing memory, share memory by communicating.
 ```
+
+Create Module
+```
+mkdir -p /Users/coderprabhu/gospace/go-programs/greetings
+cd /Users/coderprabhu/gospace/go-programs/greetings
+go mod init github.com/CoderPraBhu/go-programs/greetings
+
+```
+
+Add code in greetings.go 
+```
+package greetings
+
+import "fmt"
+
+func Hello(name string) string {
+	message := fmt.Sprintf("Hi, %v. Welcome", name)
+	return message
+}
+```
+
+Redirect Go tools to use module from local file system instead of module path
+```
+cd /Users/coderprabhu/gospace/go-programs/hello
+go mod edit -replace github.com/CoderPraBhu/go-programs/greetings=../greetings
+```
+
+Tidy up dependencies
+```
+go mod tidy
+```
