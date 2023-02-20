@@ -86,6 +86,7 @@ func main() {
 
 Install the module
 ```
+cd hello
 go mod tidy
 ```
 
