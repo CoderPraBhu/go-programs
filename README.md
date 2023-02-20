@@ -132,3 +132,16 @@ Test
 go test
 go test -v
 ```
+
+Build 
+```
+go clean
+go build
+./hello 
+go list -f '{{.Target}}'
+/Users/coderprabhu/go/bin/hello
+code ~/.bash_profile
+export PATH=$PATH:/Users/coderprabhu/go/bin
+hello
+
+```
